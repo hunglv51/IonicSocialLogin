@@ -7,12 +7,21 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-button expand="full" (click)="loginFacebook()"> 
-    <ion-icon name="logo-facebook"></ion-icon>
-    Log in Facebook
-  </ion-button>
-  <ion-button expand="full" color="danger" (click)="loginGoogle()">
-    <ion-icon name="logo-googleplus"></ion-icon>
-    Log in Google+
-  </ion-button>
+  <div *ngIf="!isLoggedIn">
+    <ion-button expand="full" (click)="loginFacebook()"> 
+      <ion-icon name="logo-facebook"></ion-icon>
+      Log in Facebook
+    </ion-button>
+    <ion-button expand="full" color="danger" (click)="loginGoogle()">
+      <ion-icon name="logo-googleplus"></ion-icon>
+      Log in Google+
+    </ion-button>
+  </div>
+  <div *ngIf="isLoggedIn">
+    <h3>Welcome {{name}}</h3>
+    <p>Your email is {{email}}</p>
+    <ion-button expand="full" color="secondary" (click)="logOut()">
+      Log out
+    </ion-button>
+  </div>
 </ion-content>
