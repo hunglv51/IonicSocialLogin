@@ -82,7 +82,6 @@
     <plugin name="cordova-plugin-splashscreen" spec="5.0.2" />
     <plugin name="cordova-plugin-ionic-webview" spec="^2.0.0" />
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
-    <engine name="browser" spec="~5.0.4" />
     <plugin name="cordova-plugin-facebook4" spec="^2.3.0">
         <variable name="APP_ID" value="710927222605838" />
         <variable name="APP_NAME" value="AppDemo" />
@@ -92,4 +91,5 @@
         <variable name="REVERSED_CLIENT_ID" value="com.googleusercontent.apps.1053422314296-jc6kvt4lt457457m7au1blpv9hontt9d" />
         <variable name="WEB_APPLICATION_CLIENT_ID" value="1053422314296-jc6kvt4lt457457m7au1blpv9hontt9d.apps.googleusercontent.com" />
     </plugin>
+    <engine name="browser" spec="~5.0.4" />
 </widget>
