@@ -31,6 +31,7 @@ export class HomePage {
     this.gg.login({})
     .then(res => {
       console.log(res);
+      this.loginType = "gg";
       this.isLoggedIn = true;
       this.name = res["displayName"];
       this.email = res["email"];
@@ -61,18 +62,23 @@ export class HomePage {
     this.fb.logout()
     .then(rs => {
       // console.log(rs);
+      console.log("Fb log out");
       this.isLoggedIn = false;
     })
-    .catch(err=> console.log(err));
+    .catch(err=> console.log("Fb log out error",err));
     
   }
   logOutGoogle(){
     this.gg.logout()
-    .then(res => console.log(res))
+    .then(res => {
+      console.log(res);
+      console.log("GG log out")
+    })
     .catch(err => {
+      console.log("GG log out error");
       console.log(err);
       this.isLoggedIn = false;
-      console.log(this.isLoggedIn);
+    
     });
     
   }
