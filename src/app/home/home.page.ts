@@ -55,15 +55,19 @@ export class HomePage {
       this.logOutFacebook();
       break;
       default:
-      this.loginGoogle();    
+      this.logOutGoogle();    
     } 
+    this.isLoggedIn = false;
+      this.email = "";
+      this.loginType = "";
+      this.name = "";
   }
   logOutFacebook(){
     this.fb.logout()
     .then(rs => {
       // console.log(rs);
       console.log("Fb log out");
-      this.isLoggedIn = false;
+      
     })
     .catch(err=> console.log("Fb log out error",err));
     
@@ -71,6 +75,7 @@ export class HomePage {
   logOutGoogle(){
     this.gg.logout()
     .then(res => {
+      
       console.log(res);
       console.log("GG log out")
     })
